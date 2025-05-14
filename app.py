@@ -14,10 +14,14 @@ app = Flask(__name__)
 #     app.run(debug=True)
 
 #Ruta principal
-app.route ('/')
+@app.route ('/')
 # aqui va el nombre de la funcion o metodo que gestiona la ruta
 def weaher_dashboard():
     return render_template ('home.html')
 
 #Ruta que despliega los resultados
-app.route ('/results')
+@app.route ('/results')
+def render_resullts
+    cityname= request.form['cityname']
+    
+    api = get_api_key(): 
