@@ -33,5 +33,7 @@ def render_resultados
 
 def get_weather_results (cityname, api_key)
 
-url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
-bogota&appid=42b07ad03bf5cb6a5cc2e9200e7ac44a
+    url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}".format(cityname,api_key)
+    r = request.get(url)
+    return r.jsom
+
