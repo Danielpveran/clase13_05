@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div>
+        <h2>Weather Flask</h2>
+        </div>
+
+        <div class="inputcity">
+            <p>Enter your city name
+        </div>
+        
+        <form action="{{url_for('render_results')}}" method="POST">
+            <input id ="weatherInput" type="text" name="cityname">
+            <input id="weatherSubmit" type="submit" Value="Submit">
+        </form>
+
+        <script src="" async defer></script>
+    </body>
+</html>
