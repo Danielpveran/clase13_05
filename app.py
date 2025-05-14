@@ -43,8 +43,10 @@ def render_resultados
 
     # vamos a conectarnos al api y consumirlo
 
+    # data contiene el json con las respuestas
     data = get_weather_results(cityname, api)
-
+    
+    temp = "{0:.2f}"format (data['main']['temp'])
 
 
 # aqui se consumio el servicio web 
@@ -56,13 +58,6 @@ def  get_weather_results (cityname, api_key)
     r = request.get(url)
     return r.json
  
- 
-
-
-
-
-
-
 
 
 def get_api_key():
