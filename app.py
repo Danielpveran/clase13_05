@@ -44,7 +44,7 @@ def render_resultados():
     # vamos a conectarnos al api y consumirlo
 
     # data contiene el json con las respuestas
-    data = get_weather_results(cityname, api):
+    data = get_weather_results(cityname, api)
     
     temp = "{0:.2f}".format (data['main']['temp'])
 
@@ -62,7 +62,7 @@ def render_resultados():
                             feels_like= feels_like,)
 # aqui se consumio el servicio web 
 
-def  get_weather_results (cityname, api_key)
+def  get_weather_results (cityname, api_key):
 
     url =  "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}".format(cityname,api_key)
  
