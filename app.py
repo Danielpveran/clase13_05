@@ -26,3 +26,12 @@ def render_resullts
     
     # Antes de consumir el api
     api = get_api_key();
+    
+    
+    
+    
+
+def get_api_key():
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    return config ['openweathermap'] ['api']
