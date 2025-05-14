@@ -10,10 +10,14 @@ app = Flask(__name__)
 #Se inicia la logica de la app
 
 # Esta condicion siempre va indicando 
-if __name__ =="__main__":
-    app.run(debug=True)
-    
+# if __name__ =="__main__":
+#     app.run(debug=True)
+
+#Ruta principal
 app.route ('/')
 # aqui va el nombre de la funcion o metodo que gestiona la ruta
 def weaher_dashboard():
     return render_template ('home.html')
+
+#Ruta que despliega los resultados
+app.route ('/results')
