@@ -24,4 +24,5 @@ def weaher_dashboard():
 def render_resullts
     cityname= request.form['cityname']
     
-    api = get_api_key(): 
+    # Antes de consumir el api
+    api = get_api_key();
