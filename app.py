@@ -21,17 +21,17 @@ def weaher_dashboard():
 
 #Ruta que despliega los resultados
 @app.route ('/results')
-def render_resullts
+def render_resultados
     cityname= request.form['cityname']
     
     # Antes de consumir el api
     api = get_api_key();
     
-    
+    data = get_weather_results(cityname, api)
     
     
 
-def get_api_key():
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    return config ['openweathermap'] ['api']
+def get_weather_results (cityname, api_key)
+
+url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
+bogota&appid=42b07ad03bf5cb6a5cc2e9200e7ac44a
