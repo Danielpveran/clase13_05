@@ -26,8 +26,8 @@ def weather_dashboard():
 
 
 # Ruta que pinta los resultados    
-@app.route ('/results')
-def render_resultados 
+@app.route ('/results',method=['POST'])
+def render_resultados(): 
     
     # para poder mostrar los resultados, antes debo saber cual es la ciudad
     # que digito en el formulario
@@ -44,11 +44,22 @@ def render_resultados
     # vamos a conectarnos al api y consumirlo
 
     # data contiene el json con las respuestas
-    data = get_weather_results(cityname, api)
+    data = get_weather_results(cityname, api):
     
-    temp = "{0:.2f}"format (data['main']['temp'])
+    temp = "{0:.2f}".format (data['main']['temp'])
 
-
+    #se toma la sensacion termica
+    
+    feels_like = "{0:.2f}".format (data['main']['feels_like'])
+    
+    weather= data ["weather"]['main']
+    
+    location =data['name']
+    
+    #Se despliega en la respueta
+    
+    return render_template ('results.html', location=location,temp = temp, 
+                            feels_like= feels_like,)
 # aqui se consumio el servicio web 
 
 def  get_weather_results (cityname, api_key)
